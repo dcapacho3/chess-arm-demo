@@ -1,0 +1,154 @@
+{
+ "moves": 16,
+ "ok": 16,
+ "wall_seconds": 395.6,
+ "plan_seconds_total": 1.31,
+ "fallbacks_to_ompl": 0,
+ "final_fen": "2kr1b1r/pppq2pp/2n1pn2/3p4/3P2b1/2N2N2/PPP1BPPP/R1BQ1RK1 w - - 3 9",
+ "log": [
+  {
+   "move": "e4",
+   "ok": true,
+   "why": "",
+   "seconds": 19.9,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "d5",
+   "ok": true,
+   "why": "",
+   "seconds": 17.7,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "e5",
+   "ok": true,
+   "why": "",
+   "seconds": 17.5,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "f5",
+   "ok": true,
+   "why": "",
+   "seconds": 17.3,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "exf6",
+   "ok": true,
+   "why": "",
+   "seconds": 36.6,
+   "max_place_err_mm": 0.1,
+   "retries": [],
+   "plan_seconds": 0.14
+  },
+  {
+   "move": "Nxf6",
+   "ok": true,
+   "why": "",
+   "seconds": 36.0,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.15
+  },
+  {
+   "move": "Nf3",
+   "ok": true,
+   "why": "",
+   "seconds": 21.2,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "Bg4",
+   "ok": true,
+   "why": "",
+   "seconds": 19.3,
+   "max_place_err_mm": 0.1,
+   "retries": [],
+   "plan_seconds": 0.07
+  },
+  {
+   "move": "Be2",
+   "ok": true,
+   "why": "",
+   "seconds": 21.6,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "Nc6",
+   "ok": true,
+   "why": "",
+   "seconds": 18.3,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "O-O",
+   "ok": true,
+   "why": "",
+   "seconds": 43.5,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.13
+  },
+  {
+   "move": "e6",
+   "ok": true,
+   "why": "",
+   "seconds": 17.7,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.07
+  },
+  {
+   "move": "d4",
+   "ok": true,
+   "why": "",
+   "seconds": 20.1,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "Qd7",
+   "ok": true,
+   "why": "",
+   "seconds": 16.8,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "Nc3",
+   "ok": true,
+   "why": "",
+   "seconds": 21.5,
+   "max_place_err_mm": 0.0,
+   "retries": [],
+   "plan_seconds": 0.06
+  },
+  {
+   "move": "O-O-O",
+   "ok": true,
+   "why": "",
+   "seconds": 31.9,
+   "max_place_err_mm": 0.1,
+   "retries": [],
+   "plan_seconds": 0.13
+  }
+ ]
+}
