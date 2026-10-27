@@ -1,5 +1,7 @@
 # chess_arm_demo
 
+![A UR5e plays chess in Gazebo](docs/demo.gif)
+
 A UR5e plays chess in Gazebo. A move list chooses each move, python-chess checks it is legal, MoveIt 2 plans it,
 and the arm moves the piece with a two-finger gripper and a physics grasp. After every move the simulator's true piece
 poses are compared with the expected board.
@@ -21,6 +23,20 @@ MoveIt 2 and a ROS 2 node that plays the game.
 
 ## How it works
 
+```mermaid
+flowchart LR
+    M["move list"] --> G["python-chess: legal move,<br/>then pick-and-place actions"]
+    G --> P["player node"]
+    P -->|"targets"| MI["MoveIt 2: collision-checked<br/>Cartesian path, OMPL fallback"]
+    MI -->|"trajectory"| C["ros2_control<br/>arm controller"]
+    P -->|"finger commands"| F["Gazebo gripper<br/>force controller"]
+    C --> S["Gazebo: UR5e, table,<br/>board, 34 pieces"]
+    F --> S
+    S -->|"true piece poses"| V["check after every move"]
+    V --> P
+    P -->|"scene updates"| MI
+```
+
 - **Planning (`moveit_arm.py`).** Each move is a collision-checked straight path from `/compute_cartesian_path`, run
   by `/execute_trajectory` on the arm's `joint_trajectory_controller`. If a straight path is blocked, the same target goes
   to OMPL through `/move_action` (it did not trigger in the demo game). A tolerance abort re-plans from where the arm
@@ -37,6 +53,8 @@ MoveIt 2 and a ROS 2 node that plays the game.
   never to plan.
 - **World (`worlds/chess.sdf`).** Floor, table with legs, board, 34 pieces (32 and a spare queen per colour) and three
   cameras (overview 1920x1080, side and top 1280x720; topics `/cam/overview`, `/cam/side`, `/cam/top`). The robot is spawned on the table by `launch/sim.launch.py`.
+
+![One frame of the demo: the gripper carries a piece; the side and top views are at the right](docs/demo_frame.jpg)
 
 ## Run
 
